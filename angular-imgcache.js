@@ -76,15 +76,15 @@ angular.module('ImgCache', [])
             }
 
             attrs.$observe('icSrc', function(src) {
-
-                loadImg('src', el, src);
-
+                if (src) {
+                    loadImg('src', el, src);
+                }
             });
 
             attrs.$observe('icBg', function(src) {
-
-                loadImg('bg', el, src);
-
+                if (src) {
+                    loadImg('bg', el, src);
+                }
             });
 
         }
