@@ -1,14 +1,14 @@
 angular-imgcache.js
 ================
 
-Simple [imgcache.js](https://github.com/chrisben/imgcache.js) wrapper for AngularJS, can be user with Ionic/Cordova/Phonegap.
+Simple [imgcache.js](https://github.com/chrisben/imgcache.js) wrapper for AngularJS, can be used with Ionic/Cordova/Phonegap.
 
 ## Installation
 
 Install via bower
 
 ```sh
-bower install --save angular-imgcache.js
+bower install --save https://github.com/Maistho/angular-imgcache.js#1.0.0
 ```
 
 Link library and dependencies
@@ -103,7 +103,7 @@ Access imgcache.js and its original methods in your components via promise to ma
 
 ##### Directive
 
-Angular-imgcache.js comes with directive, which first looks into cache for an image. If not present, it downloads image, then stores in cache and uses it.
+Angular-imgcache.js comes with directive, which first looks into cache for an image. If not present, it downloads the image, then stores in cache and uses it.
 
 We can set src of an image with `ic-src` attribute.
 
