@@ -3,16 +3,12 @@ angular-imgcache.js
 
 Simple [imgcache.js](https://github.com/chrisben/imgcache.js) wrapper for AngularJS, can be used with Ionic/Cordova/Phonegap.
 
-###Notice
-This is a updated fork of JBenes original. JBenes version does not work, and thus you will need to instal this version
-from github directly.
-
 ## Installation
 
 Install via bower
 
 ```sh
-bower install --save https://github.com/Maistho/angular-imgcache.js.git#1.0.0
+bower install --save angular-imgcache.js
 ```
 
 Link library and dependencies
