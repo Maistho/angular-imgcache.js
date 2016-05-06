@@ -1,6 +1,6 @@
 {
   "name": "angular-imgcache.js",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "Simple imgcache.js wrapper for AngularJS",
   "main": "angular-imgcache.js",
   "repository": {
