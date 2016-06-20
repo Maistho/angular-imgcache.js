@@ -3,9 +3,12 @@ angular.module('ImgCache', [])
 .provider('ImgCache', function() {
 
     ImgCache.$init = function() {
-
         ImgCache.init(function() {
-            ImgCache.$deferred.resolve();
+            if (!ImgCache.options['cacheDisabled']) {
+                ImgCache.$deferred.resolve();
+            } else {
+                ImgCache.$deferred.reject();
+            }
         }, function() {
             ImgCache.$deferred.reject();
         });
@@ -19,6 +22,10 @@ angular.module('ImgCache', [])
 
     this.setOption = function(name, value) {
         ImgCache.options[name] = value;
+    }
+    
+    this.disableCache = function(value) {
+        ImgCache.options['cacheDisabled'] = value;
     }
 
     this.$get = ['$q', function ($q) {
@@ -53,6 +60,17 @@ angular.module('ImgCache', [])
                 });
             }
 
+            var fallbackImg = function(type, el, src) {
+                // fallback to original source if e.g. src is a relative file and therefore loaded from file system
+                if (src) {
+                    if (type === 'bg') {
+                        el.css({ 'background-image': 'url(' + src + ')' });
+                    } else {
+                        el.attr('src', src);
+                    }
+                }
+            }
+            
             var loadImg = function(type, el, src) {
 
                 ImgCache.$promise.then(function() {
@@ -64,20 +82,14 @@ angular.module('ImgCache', [])
                         } else {
                             ImgCache.cacheFile(src, function() {
                                 setImg(type, el, src);
-                            },function() {
-                                // fallback to original source if e.g. src is a relative file and therefore loaded from file system
-                                if(src)
-                                {
-                                    if(type === 'bg') {
-                                        el.css({'background-image': 'url(' + src + ')' });
-                                    } else {
-                                        el.attr('src', src);
-                                    }
-                                }
+                            }, function(error) {
+                                fallbackImg(type, el, src);
                             });
                         }
 
                     });
+                }, function(error){
+                    fallbackImg(type, el, src);
                 });
             }
 

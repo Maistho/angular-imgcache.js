@@ -1,9 +1,10 @@
 {
   "name": "angular-imgcache",
   "main": "angular-imgcache.js",
-  "version": "1.0.1",
-  "homepage": "https://github.com/maistho/angular-imgcache",
+  "version": "1.0.2",
+  "homepage": "https://github.com/GartorwareCorp/angular-imgcache.js",
   "authors": [
+    "gartorware <gartorware@gmail.com>",
     "maistho <maistho@gmail.com>",
     "Benes <benes@kodarna.cz>"
   ],
@@ -22,7 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.2.*",
+    "angular": ">=1.2.*",
     "imgcache.js": "*"
   }
 }
