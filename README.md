@@ -8,7 +8,7 @@ Simple [imgcache.js](https://github.com/chrisben/imgcache.js) wrapper for Angula
 Install via bower
 
 ```sh
-bower install --save angular-imgcache.js
+bower install --save https://github.com/GartorwareCorp/angular-imgcache.js.git
 ```
 
 Link library and dependencies
@@ -50,6 +50,10 @@ You can override imgcache.js default options in Angulars config section.
     // but set this option if you are using platform like Ionic -
     // in this case we need init imgcache.js manually after device is ready
     ImgCacheProvider.manualInit = true;
+
+    // Disable cache if required (for instance to get rid of CORS issues on browser)
+    var isMobilePlatform = ionic.Platform.isAndroid() || ionic.Platform.isIOS() || ionic.Platform.isIPad() || ionic.Platform.isWindowsPhone();
+    ImgCacheProvider.disableCache(!isMobilePlatform);
 
     ...
 
