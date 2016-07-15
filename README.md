@@ -1,5 +1,4 @@
-angular-imgcache.js
-================
+# angular-imgcache.js
 
 Simple [imgcache.js](https://github.com/chrisben/imgcache.js) wrapper for AngularJS, can be used with Ionic/Cordova/Phonegap.
 
@@ -29,7 +28,7 @@ angular.module('MyApp', [
 
 ## Usage
 
-##### Configuration
+### Configuration
 
 You can override imgcache.js default options in Angulars config section.
 
@@ -61,8 +60,7 @@ You can override imgcache.js default options in Angulars config section.
 });
 ```
 
-If you are using platform like Ionic, you have to init ImgCache manually.
-Note: you must set `ImgCacheProvider.manualInit = true;` as in example above.
+If you are using platform like Ionic, you have to init ImgCache manually. Note: you must set `ImgCacheProvider.manualInit = true;` as in example above.
 
 ```javascript
 .run(function($ionicPlatform, ImgCache) {
@@ -92,7 +90,7 @@ function onDeviceReady() {
 
 (Thx @emps for this note in #1)
 
-##### Service
+### Service
 
 Access imgcache.js and its original methods in your components via promise to make sure that imgcache.js library is already initialized
 
@@ -106,7 +104,7 @@ Access imgcache.js and its original methods in your components via promise to ma
 });
 ```
 
-##### Directive
+### Directive
 
 Angular-imgcache.js comes with directive, which first looks into cache for an image. If not present, it downloads the image, then stores in cache and uses it.
 
@@ -121,3 +119,9 @@ Or set elements `background-image` with `ic-bg` attribute.
 ```html
 <div img-cache ic-bg="{{imgUrl}}" ></div>
 ```
+
+## Contributing
+
+If you have any issues, please feel free to open an issue.
+
+If you want to contribute code, feel free to do that as well! I will be extra happy if you also check you code using [jscs](http://jscs.info/) and [jshint](http://jshint.com/)
