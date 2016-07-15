@@ -51,6 +51,11 @@ You can override imgcache.js default options in Angulars config section.
     // in this case we need init imgcache.js manually after device is ready
     ImgCacheProvider.manualInit = true;
 
+    // If you want to, you can disable the cache.
+    // This might be useful to disable it to get rid of CORS issues when
+    // developing cordova Applications using a browser.
+    ImgCacheProvider.disableCache(true);
+
     ...
 
 });
