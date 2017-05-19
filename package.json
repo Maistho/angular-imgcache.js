@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/maistho/angular-imgcache/issues"
   },
-  "homepage": "https://github.com/maistho/angular-imgcache#readme"
+  "homepage": "https://github.com/maistho/angular-imgcache#readme",
+  "peerDependencies": {
+    "imgcache.js": "^1.0.0"
+  }
 }
