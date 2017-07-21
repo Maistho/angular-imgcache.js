@@ -1,8 +1,11 @@
 {
   "name": "angular-imgcache.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Simple imgcache.js wrapper for AngularJS",
   "main": "angular-imgcache.js",
+  "scripts": {
+    "release": "standard-version"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maistho/angular-imgcache.git"
