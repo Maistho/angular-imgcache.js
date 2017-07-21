@@ -51,6 +51,7 @@ angular.module('ImgCache', [])
                     } else {
                         el.attr('src', dest);
                     }
+                    scope.$emit('ImgCache.loaded');
                 });
             };
 
@@ -63,6 +64,7 @@ angular.module('ImgCache', [])
                     } else {
                         el.attr('src', src);
                     }
+                    scope.$emit('ImgCache.loaded');
                 }
             };
 
