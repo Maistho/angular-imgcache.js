@@ -1,6 +1,6 @@
 {
   "name": "angular-imgcache.js",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Simple imgcache.js wrapper for AngularJS",
   "main": "angular-imgcache.js",
   "repository": {
@@ -20,5 +20,15 @@
   "homepage": "https://github.com/maistho/angular-imgcache#readme",
   "peerDependencies": {
     "imgcache.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^1.3.2",
+    "cz-conventional-changelog": "^2.0.0",
+    "standard-version": "^4.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
