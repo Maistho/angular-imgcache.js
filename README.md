@@ -4,21 +4,34 @@ Simple [imgcache.js](https://github.com/chrisben/imgcache.js) wrapper for Angula
 
 ## Installation
 
-Install via bower
+Install via npm
+```sh
+npm install --save imgcache.js angular-imgcache.js
+```
 
+Install via Yarn
+```sh
+yarn add imgcache.js angular-imgcache.js
+```
+
+Install via bower (deprecated, use npm or yarn instead)
 ```sh
 bower install --save angular-imgcache.js
 ```
 
-Link library and dependencies
 
+There is only a single file that you need to include: `angular-imgcache.js`
+
+Example html
 ```html
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/imgcache.js/js/imgcache.js"></script>
-<script src="bower_components/angular-imgcache.js/angular-imgcache.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/imgcache.js/js/imgcache.js"></script>
+
+<!-- Add this: -->
+<script src="node_modules/angular-imgcache.js/angular-imgcache.js"></script>
 ```
 
-Load module
+### Load module
 
 ```javascript
 angular.module('MyApp', [
